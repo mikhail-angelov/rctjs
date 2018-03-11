@@ -1,0 +1,42 @@
+{
+  "name": "rctjs",
+  "module": "dist/rctjs.js",
+  "version": "1.0.0",
+  "description": "Elementary React like library",
+  "scripts": {
+    "test": "NODE_ENV=test jest --coverage --no-cache",
+    "bundle": "rollup -i src/index.js -o dist/rctjs.js -f umd -mn rctjs",
+    "jsx": "rollup -c ./jsx/jsx-rollup.cfg",
+    "build": "node ./build.js",
+    "build-example": "node ./example/build.js",
+    "dev": "node ./example/watch.js"
+  },
+  "keywords": [
+    "react",
+    "virtual dom",
+    "pico dom",
+    "ultra dom",
+    "rct",
+    "rctjs"
+  ],
+  "author": "Mikhail Angelov",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "jest": "^22.0.4",
+    "rollup": "^0.53.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
+}
